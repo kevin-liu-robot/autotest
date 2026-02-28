@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+    android:id="@+id/btn"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="260dp"
+    android:layout_marginTop="206dp"
+    android:layout_alignParentTop="false"
+    android:text="启动" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:layout_alignStart="@+id/btn"
+        android:text="停止" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/nbar"
+        android:layout_alignStart="@+id/finish"
+        android:text="testBox" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="89dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignStart="@+id/finish"
+        android:text="测试停止!" />
+
+    <Button
+        android:id="@+id/small"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop"
+        android:layout_alignStart="@+id/btn"
+        android:onClick="show_small_c"
+        android:text="打开悬浮窗" />
+
+
+
+    <Button
+        android:id="@+id/set_ft"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn"
+        android:layout_below="@+id/small"
+        android:onClick="open_Overlays_c"
+        android:text="设置悬浮权限" />
+    <Button
+        android:id="@+id/set_as"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_ft"
+        android:layout_alignStart="@+id/btn"
+        android:onClick="open_as_c"
+        android:text="设置执行权限" />
+
+    <Switch
+        android:id="@+id/nbar"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sbar"
+        android:layout_alignStart="@+id/finish"
+        android:checked="true"
+        android:text="导航栏补偿" />
+
+    <Switch
+        android:id="@+id/sbar"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hour"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:text="状态栏补偿" />
+
+    <Switch
+        android:id="@+id/finish"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="130dp"
+        android:layout_alignTop="@+id/btn"
+        android:text="任务已完成" />
+
+    <EditText
+        android:id="@+id/hour"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_alignBaseline="@+id/textView"
+        android:ems="10"
+        android:inputType="textPersonName|number"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_below="@+id/finish"
+        android:layout_alignStart="@+id/finish"
+        android:text="刷新时间：" />
+
+    <EditText
+        android:id="@+id/f_list"
+        android:layout_width="120dp"
+        android:layout_height="509dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
+
+    <EditText
+        android:id="@+id/mac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_as"
+        android:layout_alignStart="@+id/btn"
+        android:text="清除记录" />
+
+    <Switch
+        android:id="@+id/circle"
+        android:layout_width="122dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/status"
+        android:layout_alignStart="@+id/finish"
+        android:checked="true"
+        android:text="循环3次" />
+
+</RelativeLayout>
